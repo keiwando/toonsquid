@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/general/index</title>
+    <g id="icons/general/index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <line x1="10" y1="5.00534271" x2="28" y2="5.00534271" id="Path-23" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></line>
+        <line x1="10" y1="24.9946573" x2="28" y2="24.9946573" id="Path-23-Copy-2" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></line>
+        <circle id="Oval" fill="#FFFFFF" cx="2" cy="5.00534271" r="2"></circle>
+        <line x1="10" y1="15" x2="28" y2="15" id="Path-23-Copy" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></line>
+        <circle id="Oval-Copy" fill="#FFFFFF" cx="2" cy="15" r="2"></circle>
+        <circle id="Oval-Copy-2" fill="#FFFFFF" cx="2" cy="24.9946573" r="2"></circle>
+    </g>
+</svg>
