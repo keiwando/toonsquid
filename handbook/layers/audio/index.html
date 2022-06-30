@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Audio</title>
+  <script>
+    document.toonsquid_i18nValues = {"home":"Home","support":"Support","download":"Download","discussions":"Discussions","handbook":"Handbook","contact":"Contact","faq":"FAQ","home.toonsquid_tagline":"The powerful animation studio for your iPad.","home.brushes":"Brushes","home.brushes_desc":"Beautiful.\nHigh performance.\nFully customizable.","home.trad_anim":"Traditional Animation","home.trad_anim_desc":"Hand-drawn.\nCharming.","home.keyframing":"Keyframing","home.keyframing_desc":"Animate layer properties.\nDefine motion paths.","home.privacy":"Privacy","home.privacy_desc":"No ads.\nNo subscriptions.\nNo tracking.","home.text_layer":"Text Layers","home.text_layer_desc":"Emojis.\nRight-to-left text.\nTrimming animation.","home.multimedia":"Multimedia","home.multimedia_desc":"Video and audio layers.","home.path_layer":"Vector Shapes","home.path_layer_desc":"Gradients.\nControl points.\nMorphing animations.","home.symbols":"Symbols","home.symbols_desc":"Animate once.\nReuse many times.","home.vector_brushes":"Vector Brushes","home.vector_brushes_desc":"Sharp strokes at all scales.","home.masking":"Layer masking","home.masking_desc":"Clip to animated layer contents.","home.easing":"Easing Curves","home.easing_desc":"Lots of customizable presets.","home.camera":"Camera","home.camera_desc":"Dynamic movement.","home.timeline":"Timeline","home.timeline_desc":"Powerful and flexible.","general.no_search_results":"No search results","footer.about":"About","footer.externalLinks":"External Links","footer.legal":"Legal","footer.privacy":"Privacy Policy","footer.terms":"Terms of Use","footer.imprint":"Imprint","search_ph":"What are you looking for?","hb.interface":"Interface","hb.editor":"Editor","hb.timeline":"Timeline","hb.library":"Library","hb.gestures":"Gestures","hb.shortcuts":"Shortcuts","hb.overview":"Overview","hb.projects":"Projects","hb.create_project":"Create a new Project","hb.manage":"Manage Projects","hb.scenes":"Scenes","hb.backup":"Backup","hb.layers":"Layers","hb.animation":"Animation Layer","hb.drawings":"Drawings","hb.layer_types":"Layer Types","hb.inspector":"Inspector","hb.pixel_layer":"Pixel Layer","hb.group":"Group Layer","hb.background":"Background Layer","hb.camera":"Camera","hb.audio":"Audio","hb.video":"Video","hb.onion_skin":"Onion Skinning","hb.masking":"Masking","hb.layer_list":"Layer List","hb.blend_modes":"Blend Modes","hb.keyframes":"Keyframes","hb.easing_curves":"Easing Curves","hb.brushes":"Brushes","hb.brush_tool":"Brush Tool","hb.vector":"Vector Brushes","hb.brush_editor":"Brush Editor","hb.brush_settings":"Brush Settings","hb.brush_textures":"Brush Textures","hb.brush_import":"Import and Export","hb.transform":"Transform","hb.transform_properties":"Transform Properties","hb.transform_tool":"Transform Tool","hb.transform_layer":"Transform Layer","hb.motion_path":"Motion Path","hb.hierarchy":"Hierarchy","hb.text":"Text","hb.text_layer":"Text Layer","hb.text_editing":"Text Editing","hb.fonts":"Fonts","hb.path":"Path","hb.path_layer":"Path Layer","hb.path_tool":"Path Tool","hb.shape_library":"Shape Library","hb.morphing":"Morphing","hb.symbols":"Symbols","hb.animation_clips":"Animation Clips","hb.symbol_layer":"Symbol Layer","hb.create_symbol":"Create Symbols","hb.selection":"Selection","hb.selection_tool":"Selection Tool","hb.colors":"Colors","hb.color_picker":"Color Picker","hb.pipette":"Pipette","hb.fill_tool":"Fill Tool","hb.color_palettes":"Color Palettes","hb.gradients":"Gradients","hb.color_spaces":"Color Spaces","hb.export":"Export","hb.gif":"GIF","hb.image":"Image","hb.image_sequence":"Image Sequence","hb.project":"Project","hb.settings":"Settings","hb.general":"General","hb.project_info":"Project Info"};
+    document.toonsquid_content = `<h4><a href="/handbook/layers/overview">Layers</a></h4><!--- tags: audio, music, lip-syncing, volume -->
+
+<h1>Audio</h1><p>Use audio layers in order to add audio clips to the timeline to be played back together with the animation.</p>
+<p><img src="/assets/images/hb/layers/audio.jpg" alt="Audio layer"></p>
+<p>Audio clips behave similarly to drawings in the timeline. You can use the <a href="/handbook/interface/timeline#retiming">retiming handles</a> to trim and shift them.</p>
+<h2 id="import" class="heading-with-anchor">Importing Audio <!-- anchor: import --><a href="#import" class="heading-with-anchor-anchor">#</a></h2><p>To import audio clips into your project so that you can insert them into the timeline, follow these steps:</p>
+<ol>
+<li>Open the <a href="/handbook/interface/editor#library">library</a>.</li>
+<li>Tap the <code>+</code> button in the top right corner.</li>
+<li>Tap <code>Import from Files</code>.</li>
+<li>Select an audio file.</li>
+</ol>
+<p>This will add the file to the library under the <code>Audio Clips</code> tab and will automatically insert an audio layer with this clip into the timeline.</p>
+<h3 id="file-formats" class="heading-with-anchor">Supported File Formats <!-- anchor: file-formats --><a href="#file-formats" class="heading-with-anchor-anchor">#</a></h3><p>ToonSquid supports audio files with the following formats to be imported into your projects.</p>
+<ul>
+<li>.wav</li>
+<li>.mp3</li>
+<li>.aiff</li>
+<li>.m4a</li>
+<li>.flac</li>
+</ul>
+<p>All audio files are converted to 44.1kHz .wav files during the import for more efficient playback. The converted audio file is saved as part of the project.</p>
+<h2 id="properties" class="heading-with-anchor">Properties <!-- anchor: properties --><a href="#properties" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/layers/audio_properties.jpg" alt="Audio layer"></p>
+<h3 id="mute" class="heading-with-anchor">Mute <!-- anchor: mute --><a href="#mute" class="heading-with-anchor-anchor">#</a></h3><p>Audio layers can be muted entirely using the mute button (which is shown instead of the visibility button).</p>
+<h3 id="volume" class="heading-with-anchor">Volume <!-- anchor: volume --><a href="#volume" class="heading-with-anchor-anchor">#</a></h3><p>Specifies by how many decibels the volume of the audio clip should be changed. Can be animated using <a href="/handbook/keyframes/keyframes">keyframes</a>.</p>
+<h3 id="offset" class="heading-with-anchor">Offset <!-- anchor: offset --><a href="#offset" class="heading-with-anchor-anchor">#</a></h3><p>The number of (visual) frames worth of audio that should be skipped when the current clip starts playing. This is used to trim the beginning of an audio clip, since dragging the left <a href="/handbook/interface/timeline#retiming">retiming handle</a> just shifts the audio clip in the timeline.<br/>This offset is automatically updated when you <a href="/handbook/layers/audio#split-audio-clip">split</a> an audio clip.</p>
+<h2 id="settings" class="heading-with-anchor">Audio Settings <!-- anchor: settings --><a href="#settings" class="heading-with-anchor-anchor">#</a></h2><h3 id="play-audio-while-scrubbing" class="heading-with-anchor">Play audio while scrubbing the timeline <!-- anchor: play-audio-while-scrubbing --><a href="#play-audio-while-scrubbing" class="heading-with-anchor-anchor">#</a></h3><p>Whether the audio of individual frames should be played while you scrub through the timeline. This can be helpful when performing lip-syncing or when you are otherwise trying to sync your animation to an audio layer. </p>
+<p>Disable this to only play audio during playback.</p>
+<h2 id="split-audio-clip" class="heading-with-anchor">Split Audio Clip <!-- anchor: split-audio-clip --><a href="#split-audio-clip" class="heading-with-anchor-anchor">#</a></h2><p>When an audio clip is selected, you can use the &quot;Split Audio Clip&quot; button to split the clip into two clips at the current frame.</p>
+<h2 id="playback" class="heading-with-anchor">Playback <!-- anchor: playback --><a href="#playback" class="heading-with-anchor-anchor">#</a></h2><p>Audio will always play in real-time. Therefore, changing the frame rate of a clip that has an audio layer can lead to the audio going out of sync with the rest of the animation. Attempting to do so will show a warning.</p>
+<h2 id="export" class="heading-with-anchor">Export <!-- anchor: export --><a href="#export" class="heading-with-anchor-anchor">#</a></h2><p>You can choose whether you would like to include the audio from your animation in the exported video in the <a href="/handbook/export/video">video export settings</a>.</p>
+`;
+  </script>
+  <link rel="icon" type="image/x-icon" href="./../../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="./../../assets/images/apple_icon.png">
+  <meta property="og:image" content="./../../assets/images/apple_icon.png" />
+<link href="/main.css" rel="stylesheet"></head>
+<body id="container">
+  <script src="./../../react.production.min.js"></script>
+  <script src="./../../react-dom.production.min.js"></script>
+<script type="text/javascript" src="/main.js"></script></body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Transform Properties</title>
+  <script>
+    document.toonsquid_i18nValues = {"home":"Home","support":"Support","download":"Download","discussions":"Discussions","handbook":"Handbook","contact":"Contact","faq":"FAQ","home.toonsquid_tagline":"The powerful animation studio for your iPad.","home.brushes":"Brushes","home.brushes_desc":"Beautiful.\nHigh performance.\nFully customizable.","home.trad_anim":"Traditional Animation","home.trad_anim_desc":"Hand-drawn.\nCharming.","home.keyframing":"Keyframing","home.keyframing_desc":"Animate layer properties.\nDefine motion paths.","home.privacy":"Privacy","home.privacy_desc":"No ads.\nNo subscriptions.\nNo tracking.","home.text_layer":"Text Layers","home.text_layer_desc":"Emojis.\nRight-to-left text.\nTrimming animation.","home.multimedia":"Multimedia","home.multimedia_desc":"Video and audio layers.","home.path_layer":"Vector Shapes","home.path_layer_desc":"Gradients.\nControl points.\nMorphing animations.","home.symbols":"Symbols","home.symbols_desc":"Animate once.\nReuse many times.","home.vector_brushes":"Vector Brushes","home.vector_brushes_desc":"Sharp strokes at all scales.","home.masking":"Layer masking","home.masking_desc":"Clip to animated layer contents.","home.easing":"Easing Curves","home.easing_desc":"Lots of customizable presets.","home.camera":"Camera","home.camera_desc":"Dynamic movement.","home.timeline":"Timeline","home.timeline_desc":"Powerful and flexible.","general.no_search_results":"No search results","footer.about":"About","footer.externalLinks":"External Links","footer.legal":"Legal","footer.privacy":"Privacy Policy","footer.terms":"Terms of Use","footer.imprint":"Imprint","search_ph":"What are you looking for?","hb.interface":"Interface","hb.editor":"Editor","hb.timeline":"Timeline","hb.library":"Library","hb.gestures":"Gestures","hb.shortcuts":"Shortcuts","hb.overview":"Overview","hb.projects":"Projects","hb.create_project":"Create a new Project","hb.manage":"Manage Projects","hb.scenes":"Scenes","hb.backup":"Backup","hb.layers":"Layers","hb.animation":"Animation Layer","hb.drawings":"Drawings","hb.layer_types":"Layer Types","hb.inspector":"Inspector","hb.pixel_layer":"Pixel Layer","hb.group":"Group Layer","hb.background":"Background Layer","hb.camera":"Camera","hb.audio":"Audio","hb.video":"Video","hb.onion_skin":"Onion Skinning","hb.masking":"Masking","hb.layer_list":"Layer List","hb.blend_modes":"Blend Modes","hb.keyframes":"Keyframes","hb.easing_curves":"Easing Curves","hb.brushes":"Brushes","hb.brush_tool":"Brush Tool","hb.vector":"Vector Brushes","hb.brush_editor":"Brush Editor","hb.brush_settings":"Brush Settings","hb.brush_textures":"Brush Textures","hb.brush_import":"Import and Export","hb.transform":"Transform","hb.transform_properties":"Transform Properties","hb.transform_tool":"Transform Tool","hb.transform_layer":"Transform Layer","hb.motion_path":"Motion Path","hb.hierarchy":"Hierarchy","hb.text":"Text","hb.text_layer":"Text Layer","hb.text_editing":"Text Editing","hb.fonts":"Fonts","hb.path":"Path","hb.path_layer":"Path Layer","hb.path_tool":"Path Tool","hb.shape_library":"Shape Library","hb.morphing":"Morphing","hb.symbols":"Symbols","hb.animation_clips":"Animation Clips","hb.symbol_layer":"Symbol Layer","hb.create_symbol":"Create Symbols","hb.selection":"Selection","hb.selection_tool":"Selection Tool","hb.colors":"Colors","hb.color_picker":"Color Picker","hb.pipette":"Pipette","hb.fill_tool":"Fill Tool","hb.color_palettes":"Color Palettes","hb.gradients":"Gradients","hb.color_spaces":"Color Spaces","hb.export":"Export","hb.gif":"GIF","hb.image":"Image","hb.image_sequence":"Image Sequence","hb.project":"Project","hb.settings":"Settings","hb.general":"General","hb.project_info":"Project Info"};
+    document.toonsquid_content = `<h4><a href="/handbook/transform/overview">Transform</a></h4><!--- tags: property, transform, position, rotation, scale, motion -->
+
+<h1>Transform Properties</h1><p>All movable layers have a transform, which consists of the following properties.</p>
+<h2 id="transform" class="heading-with-anchor">Transform <!-- anchor: transform --><a href="#transform" class="heading-with-anchor-anchor">#</a></h2><p>The following three properties all support <a href="/handbook/keyframes/keyframes">keyframes</a>.</p>
+<p><img src="/assets/images/hb/transform/properties.jpg" alt="Layer pivot icon"></p>
+<h3 id="position" class="heading-with-anchor">Position <!-- anchor: position --><a href="#position" class="heading-with-anchor-anchor">#</a></h3><p>The position of a layer is the offset of its <a href="/handbook/transform/transform_properties#pivot">pivot</a> from the origin of the layer&#39;s <a href="/handbook/transform/hierarchy">parent coordinate system</a> on the x- and y-axis.</p>
+<h3 id="rotation" class="heading-with-anchor">Rotation <!-- anchor: rotation --><a href="#rotation" class="heading-with-anchor-anchor">#</a></h3><p>The rotation of the layer around its <a href="/handbook/transform/transform_properties#pivot">pivot</a>. In ToonSquid, positive rotations are clockwise, and negative rotations are counterclockwise.</p>
+<p>Additionally, rotations have an infinite range and are not restricted to the range 0° - 360°. This allows you to use <a href="/handbook/keyframes/keyframes">keyframes</a> to interpolate toward very large rotation values and therefore create an animation that rotates a layer multiple full revolutions.</p>
+<h3 id="scale" class="heading-with-anchor">Scale <!-- anchor: scale --><a href="#scale" class="heading-with-anchor-anchor">#</a></h3><p>The scale of the layer around its <a href="/handbook/transform/transform_properties#pivot">pivot</a> relative to the layer&#39;s original content size on the x- and y-axis. This is 1 (on both dimensions) by default.</p>
+<p>For example, setting a scale of 2 on a layer will make the layer twice as big on the canvas.</p>
+<h3 id="pivot" class="heading-with-anchor">Pivot <!-- anchor: pivot --><a href="#pivot" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/transform/pivot.jpg" alt="Layer pivot icon"></p>
+<p>The layer pivot is the origin of the layer&#39;s <a href="/handbook/transform/hierarchy#coordinates">coordinate system</a>. It is highlighted when the layer is selected in the transform tool via a cross-hair.</p>
+<p>As mentioned above, the pivot is the reference point for the position, rotation and scale properties.</p>
+<h4 id="editing-pivot" class="heading-with-anchor">Editing the Pivot <!-- anchor: editing-pivot --><a href="#editing-pivot" class="heading-with-anchor-anchor">#</a></h4><p>The position of the layer pivot can be manually edited. By default, the pivot is automatically placed in the center of the layer, even when the layer contents are edited.</p>
+<p>Editing of the layer pivot is disabled by default since it is not needed very often. To edit the layer pivot, you need to</p>
+<ol>
+<li>Select the layer.</li>
+<li>Select the <a href="/handbook/transform/transform_tool">transform tool</a>.</li>
+<li>Tap the layer on the canvas.</li>
+<li>Select <code>Enable pivot editing</code></li>
+</ol>
+<p>Now the pivot can be dragged around. Place the pivot where you want it to be and tap <code>Disable pivot editing</code> to lock the pivot in place again and prevent it from being accidentally edited.</p>
+<p>The layer pivot does not support keyframes.</p>
+<blockquote>
+<h4 id="tip-pivot-edit" class="heading-with-anchor">Tip: <!-- anchor: tip-pivot-edit --><a href="#tip-pivot-edit" class="heading-with-anchor-anchor">#</a></h4><p>If position, rotation and scale already have keyframed animations, editing the pivot afterwards will (by definition) result in a change of the behavior of that animation. It is therefore recommended, that you first choose where you want the layer pivot to be and only afterwards animate the layer transform.</p>
+</blockquote>
+<h2 id="editing" class="heading-with-anchor">Editing the Transform <!-- anchor: editing --><a href="#editing" class="heading-with-anchor-anchor">#</a></h2><p>The transform properties of a layer can be edited both in the <a href="/handbook/layers/inspector#transform">inspector</a> and on the canvas using the <a href="/handbook/transform/transform_tool">transform tool</a>.</p>
+`;
+  </script>
+  <link rel="icon" type="image/x-icon" href="./../../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="./../../assets/images/apple_icon.png">
+  <meta property="og:image" content="./../../assets/images/apple_icon.png" />
+<link href="/main.css" rel="stylesheet"></head>
+<body id="container">
+  <script src="./../../react.production.min.js"></script>
+  <script src="./../../react-dom.production.min.js"></script>
+<script type="text/javascript" src="/main.js"></script></body>
+</html>

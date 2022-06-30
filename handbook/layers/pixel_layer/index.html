@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Pixel Layer</title>
+  <script>
+    document.toonsquid_i18nValues = {"home":"Home","support":"Support","download":"Download","discussions":"Discussions","handbook":"Handbook","contact":"Contact","faq":"FAQ","home.toonsquid_tagline":"The powerful animation studio for your iPad.","home.brushes":"Brushes","home.brushes_desc":"Beautiful.\nHigh performance.\nFully customizable.","home.trad_anim":"Traditional Animation","home.trad_anim_desc":"Hand-drawn.\nCharming.","home.keyframing":"Keyframing","home.keyframing_desc":"Animate layer properties.\nDefine motion paths.","home.privacy":"Privacy","home.privacy_desc":"No ads.\nNo subscriptions.\nNo tracking.","home.text_layer":"Text Layers","home.text_layer_desc":"Emojis.\nRight-to-left text.\nTrimming animation.","home.multimedia":"Multimedia","home.multimedia_desc":"Video and audio layers.","home.path_layer":"Vector Shapes","home.path_layer_desc":"Gradients.\nControl points.\nMorphing animations.","home.symbols":"Symbols","home.symbols_desc":"Animate once.\nReuse many times.","home.vector_brushes":"Vector Brushes","home.vector_brushes_desc":"Sharp strokes at all scales.","home.masking":"Layer masking","home.masking_desc":"Clip to animated layer contents.","home.easing":"Easing Curves","home.easing_desc":"Lots of customizable presets.","home.camera":"Camera","home.camera_desc":"Dynamic movement.","home.timeline":"Timeline","home.timeline_desc":"Powerful and flexible.","general.no_search_results":"No search results","footer.about":"About","footer.externalLinks":"External Links","footer.legal":"Legal","footer.privacy":"Privacy Policy","footer.terms":"Terms of Use","footer.imprint":"Imprint","search_ph":"What are you looking for?","hb.interface":"Interface","hb.editor":"Editor","hb.timeline":"Timeline","hb.library":"Library","hb.gestures":"Gestures","hb.shortcuts":"Shortcuts","hb.overview":"Overview","hb.projects":"Projects","hb.create_project":"Create a new Project","hb.manage":"Manage Projects","hb.scenes":"Scenes","hb.backup":"Backup","hb.layers":"Layers","hb.animation":"Animation Layer","hb.drawings":"Drawings","hb.layer_types":"Layer Types","hb.inspector":"Inspector","hb.pixel_layer":"Pixel Layer","hb.group":"Group Layer","hb.background":"Background Layer","hb.camera":"Camera","hb.audio":"Audio","hb.video":"Video","hb.onion_skin":"Onion Skinning","hb.masking":"Masking","hb.layer_list":"Layer List","hb.blend_modes":"Blend Modes","hb.keyframes":"Keyframes","hb.easing_curves":"Easing Curves","hb.brushes":"Brushes","hb.brush_tool":"Brush Tool","hb.vector":"Vector Brushes","hb.brush_editor":"Brush Editor","hb.brush_settings":"Brush Settings","hb.brush_textures":"Brush Textures","hb.brush_import":"Import and Export","hb.transform":"Transform","hb.transform_properties":"Transform Properties","hb.transform_tool":"Transform Tool","hb.transform_layer":"Transform Layer","hb.motion_path":"Motion Path","hb.hierarchy":"Hierarchy","hb.text":"Text","hb.text_layer":"Text Layer","hb.text_editing":"Text Editing","hb.fonts":"Fonts","hb.path":"Path","hb.path_layer":"Path Layer","hb.path_tool":"Path Tool","hb.shape_library":"Shape Library","hb.morphing":"Morphing","hb.symbols":"Symbols","hb.animation_clips":"Animation Clips","hb.symbol_layer":"Symbol Layer","hb.create_symbol":"Create Symbols","hb.selection":"Selection","hb.selection_tool":"Selection Tool","hb.colors":"Colors","hb.color_picker":"Color Picker","hb.pipette":"Pipette","hb.fill_tool":"Fill Tool","hb.color_palettes":"Color Palettes","hb.gradients":"Gradients","hb.color_spaces":"Color Spaces","hb.export":"Export","hb.gif":"GIF","hb.image":"Image","hb.image_sequence":"Image Sequence","hb.project":"Project","hb.settings":"Settings","hb.general":"General","hb.project_info":"Project Info"};
+    document.toonsquid_content = `<h4><a href="/handbook/layers/overview">Layers</a></h4><!-- tags: layers, pixel, rasterized, raster, image, brush -->
+
+<h1>Pixel Layer</h1><p>Pixel layers are the drawing destination for pixel brushes, which are the most common type of brush in the brush library. They store their contents as a raster image, i.e. in a grid of pixels that can each store a single color.</p>
+<p><img src="/assets/images/hb/layers/pixel.jpg" alt="Pixel layer"></p>
+<p>The resolution of a pixel layer is determined by the <a href="/handbook/projects/scenes">scene</a> or <a href="/handbook/symbols/animation_clips">animation clip</a> that it is in. Pixel layers with a large resolution result in larger project folder sizes and more system memory usage during editing. You can only draw on a pixel layer within the area defined by this resolution.</p>
+<p>Pixel layers are also created when <a href="/handbook/layers/layer_list#rasterize">rasterizing</a> vector-based layers.</p>
+<p>By default, the transform tool can be used to edit and animate the transform property of the Pixel Layer, just like with any other layer. This moves the entire layer (and with that the area in which you can draw). However, you can also use the transform tool to <a href="/handbook/transform/transform_tool#edit-pixels">edit the layer&#39;s pixel contents</a> while keeping the transform properties unmodified.</p>
+<h2 id="images" class="heading-with-anchor">Images <!-- anchor: images --><a href="#images" class="heading-with-anchor-anchor">#</a></h2><p>When you import images via the <a href="/handbook/interface/editor#library">library</a>, they are rasterized into pixel layers in a separate, automatically created <a href="/handbook/symbols/animation_clips">animation clip</a>.</p>
+<h3 id="add-images" class="heading-with-anchor">Adding Images <!-- anchor: add-images --><a href="#add-images" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/interface/library_add_content.jpg" alt="Adding images via the library"></p>
+<p>To import images into your project so that you can insert them into the timeline, follow these steps:</p>
+<ol>
+<li>Open the <a href="/handbook/interface/editor#library">library</a>.</li>
+<li>Tap the <code>+</code> button in the top right corner.</li>
+<li>Tap <code>Import from Files</code> or <code>Import from Photos</code>.</li>
+<li>Select an image.</li>
+</ol>
+<p>This will</p>
+<ul>
+<li>load the image pixels into a new pixel layer,</li>
+<li>automatically create a new animation clip into which the pixel layer is inserted,</li>
+<li>insert a <a href="/handbook/symbols/symbol_layer">symbol</a> of this clip into the current timeline.</li>
+</ul>
+<h3 id="image-file-formats" class="heading-with-anchor">Supported File Formats <!-- anchor: image-file-formats --><a href="#image-file-formats" class="heading-with-anchor-anchor">#</a></h3><p>ToonSquid supports images with the following formats to be imported into your projects.</p>
+<ul>
+<li>PNG</li>
+<li>JPEG</li>
+<li>TIFF</li>
+<li>BMP</li>
+<li>HEIF</li>
+<li>GIF</li>
+</ul>
+`;
+  </script>
+  <link rel="icon" type="image/x-icon" href="./../../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="./../../assets/images/apple_icon.png">
+  <meta property="og:image" content="./../../assets/images/apple_icon.png" />
+<link href="/main.css" rel="stylesheet"></head>
+<body id="container">
+  <script src="./../../react.production.min.js"></script>
+  <script src="./../../react-dom.production.min.js"></script>
+<script type="text/javascript" src="/main.js"></script></body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Keyframes</title>
+  <script>
+    document.toonsquid_i18nValues = {"home":"Home","support":"Support","download":"Download","discussions":"Discussions","handbook":"Handbook","contact":"Contact","faq":"FAQ","home.toonsquid_tagline":"The powerful animation studio for your iPad.","home.brushes":"Brushes","home.brushes_desc":"Beautiful.\nHigh performance.\nFully customizable.","home.trad_anim":"Traditional Animation","home.trad_anim_desc":"Hand-drawn.\nCharming.","home.keyframing":"Keyframing","home.keyframing_desc":"Animate layer properties.\nDefine motion paths.","home.privacy":"Privacy","home.privacy_desc":"No ads.\nNo subscriptions.\nNo tracking.","home.text_layer":"Text Layers","home.text_layer_desc":"Emojis.\nRight-to-left text.\nTrimming animation.","home.multimedia":"Multimedia","home.multimedia_desc":"Video and audio layers.","home.path_layer":"Vector Shapes","home.path_layer_desc":"Gradients.\nControl points.\nMorphing animations.","home.symbols":"Symbols","home.symbols_desc":"Animate once.\nReuse many times.","home.vector_brushes":"Vector Brushes","home.vector_brushes_desc":"Sharp strokes at all scales.","home.masking":"Layer masking","home.masking_desc":"Clip to animated layer contents.","home.easing":"Easing Curves","home.easing_desc":"Lots of customizable presets.","home.camera":"Camera","home.camera_desc":"Dynamic movement.","home.timeline":"Timeline","home.timeline_desc":"Powerful and flexible.","general.no_search_results":"No search results","footer.about":"About","footer.externalLinks":"External Links","footer.legal":"Legal","footer.privacy":"Privacy Policy","footer.terms":"Terms of Use","footer.imprint":"Imprint","search_ph":"What are you looking for?","hb.interface":"Interface","hb.editor":"Editor","hb.timeline":"Timeline","hb.library":"Library","hb.gestures":"Gestures","hb.shortcuts":"Shortcuts","hb.overview":"Overview","hb.projects":"Projects","hb.create_project":"Create a new Project","hb.manage":"Manage Projects","hb.scenes":"Scenes","hb.backup":"Backup","hb.layers":"Layers","hb.animation":"Animation Layer","hb.drawings":"Drawings","hb.layer_types":"Layer Types","hb.inspector":"Inspector","hb.pixel_layer":"Pixel Layer","hb.group":"Group Layer","hb.background":"Background Layer","hb.camera":"Camera","hb.audio":"Audio","hb.video":"Video","hb.onion_skin":"Onion Skinning","hb.masking":"Masking","hb.layer_list":"Layer List","hb.blend_modes":"Blend Modes","hb.keyframes":"Keyframes","hb.easing_curves":"Easing Curves","hb.brushes":"Brushes","hb.brush_tool":"Brush Tool","hb.vector":"Vector Brushes","hb.brush_editor":"Brush Editor","hb.brush_settings":"Brush Settings","hb.brush_textures":"Brush Textures","hb.brush_import":"Import and Export","hb.transform":"Transform","hb.transform_properties":"Transform Properties","hb.transform_tool":"Transform Tool","hb.transform_layer":"Transform Layer","hb.motion_path":"Motion Path","hb.hierarchy":"Hierarchy","hb.text":"Text","hb.text_layer":"Text Layer","hb.text_editing":"Text Editing","hb.fonts":"Fonts","hb.path":"Path","hb.path_layer":"Path Layer","hb.path_tool":"Path Tool","hb.shape_library":"Shape Library","hb.morphing":"Morphing","hb.symbols":"Symbols","hb.animation_clips":"Animation Clips","hb.symbol_layer":"Symbol Layer","hb.create_symbol":"Create Symbols","hb.selection":"Selection","hb.selection_tool":"Selection Tool","hb.colors":"Colors","hb.color_picker":"Color Picker","hb.pipette":"Pipette","hb.fill_tool":"Fill Tool","hb.color_palettes":"Color Palettes","hb.gradients":"Gradients","hb.color_spaces":"Color Spaces","hb.export":"Export","hb.gif":"GIF","hb.image":"Image","hb.image_sequence":"Image Sequence","hb.project":"Project","hb.settings":"Settings","hb.general":"General","hb.project_info":"Project Info"};
+    document.toonsquid_content = `<h4><a href="/handbook/keyframes/overview">Keyframes</a></h4><!--- tags: keyframes, tweening -->
+
+<h1>Keyframes</h1><p>A keyframe is a value of a property at a specific point in time. Add keyframes to your layers to let ToonSquid automatically animate properties over time.</p>
+<p>Many but not all layer properties support keyframes. All such properties have a keyframe on the first frame of the layer.</p>
+<p><img src="/assets/images/hb/keyframes/keyframes.jpg" alt="Layer with keyframes"></p>
+<h2 id="keyframing-mode" class="heading-with-anchor">Keyframing Mode <!-- anchor: keyframing-mode --><a href="#keyframing-mode" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/interface/keyframe_mode_btn.jpg" alt="Keyframe mode button"></p>
+<p>To start adding keyframes you need to switch the editor into keyframing mode. For this, tap the <a href="/handbook/interface/timeline#keyframing">keyframing button</a> in the timeline.</p>
+<p>When the keyframing mode is enabled, the timeline shows layer properties and keyframes underneath the selected layer. You can <a href="/handbook/settings/general#show-keyframes-for">configure the editor</a> to also show keyframes in all layers in the timeline at once instead of just for the selected layer.</p>
+<p>If an animation layer is selected, only the keyframes of the selected drawing layer inside the selected drawing as shown.</p>
+<p>Keyframes are visualized in the timeline with a rhombus icon.</p>
+<h2 id="auto-keyframes" class="heading-with-anchor">Automatic Keyframe Insertion <!-- anchor: auto-keyframes --><a href="#auto-keyframes" class="heading-with-anchor-anchor">#</a></h2><p>By default, new keyframes are automatically inserted when a property is edited if either</p>
+<ul>
+<li>the <a href="/handbook/keyframes/keyframes#keyframing-mode">keyframing mode</a> is enabled</li>
+<li>the property already has more than 1 keyframe</li>
+</ul>
+<p>Automatic keyframe insertion can be disabled in the <a href="/handbook/settings/general#auto-add-keyframes">settings</a>.</p>
+<blockquote>
+<h4 id="note-keyframing-mode" class="heading-with-anchor">Note <!-- anchor: note-keyframing-mode --><a href="#note-keyframing-mode" class="heading-with-anchor-anchor">#</a></h4><p>By default, the keyframing mode does not just show you the keyframes of a layer, but also changes the editing behavior regarding automatic keyframe insertion, so make sure that you don&#39;t keep this mode enabled unintentionally.</p>
+</blockquote>
+<h2 id="manual-keyframes" class="heading-with-anchor">Manual Keyframe Insertion <!-- anchor: manual-keyframes --><a href="#manual-keyframes" class="heading-with-anchor-anchor">#</a></h2><p>You can always manually add keyframes to a property using the following steps.</p>
+<ol>
+<li><a href="/handbook/keyframes/keyframes#select">Select</a> one or more properties.</li>
+<li>Select the frame on which the keyframes should be added.</li>
+<li>Tap the <code>Add Keyframe</code> button at the bottom of the timeline.</li>
+</ol>
+<h2 id="delete-keyframes" class="heading-with-anchor">Delete Keyframes <!-- anchor: delete-keyframes --><a href="#delete-keyframes" class="heading-with-anchor-anchor">#</a></h2><p>Use the following steps to delete keyframes.</p>
+<ol>
+<li><a href="/handbook/keyframes/keyframes#select">Select</a> one or more keyframes.</li>
+<li>Tap the <code>Delete Keyframe</code> button at the bottom of the timeline.</li>
+</ol>
+<p>Alternatively, select a keyframe in the timeline, tap it again and select the <code>Delete</code> action.</p>
+<p>The first keyframe of properties cannot be deleted.</p>
+<h2 id="copy-paste" class="heading-with-anchor">Copy and Paste <!-- anchor: copy-paste --><a href="#copy-paste" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/keyframes/actions.jpg" alt="Keyframe actions"></p>
+<p>All keyframes of a property can be copied using the <code>Copy</code> <a href="/handbook/interface/editor#tip-actions-tap">action</a>. Paste the copied data on a different property to overwrite its existing keyframes.</p>
+<p>You can also copy a selection of keyframes using the <code>Copy</code> <a href="/handbook/interface/editor#tip-actions-tap">action</a> on the keyframes. </p>
+<p>Pasting the selected keyframes maintains their relative distances between each other. Pasting a keyframe on an existing keyframe overwrites the existing values.</p>
+<h2 id="select" class="heading-with-anchor">Select Properties and Keyframes <!-- anchor: select --><a href="#select" class="heading-with-anchor-anchor">#</a></h2><p>Properties and keyframes can be selected by tapping them once. Selected properties and keyframes are highlighted in the timeline.</p>
+<p>Multiple properties can be selected just like layers by swiping them to the right and then letting go Multiple keyframes can be selected similarly to drawings using a <a href="/handbook/interface/timeline#multiselection-drawings">double tap and drag</a> gesture.</p>
+<h2 id="move" class="heading-with-anchor">Move Keyframes <!-- anchor: move --><a href="#move" class="heading-with-anchor-anchor">#</a></h2><p>Keyframes can be moved using drag and drop, which also works for multiple selected keyframes at once. Similarly to when multiple keyframes are copied and pasted, dragging them also maintains their distance between each other (i.e. their timing).</p>
+<p>Keyframes cannot be dropped onto frames that already have other keyframes, and they cannot be dropped in other properties either.</p>
+<h2 id="visibility" class="heading-with-anchor">Property Visibility <!-- anchor: visibility --><a href="#visibility" class="heading-with-anchor-anchor">#</a></h2><p>By default, all keyframeable properties of a layer are shown in the timeline. You can hide the ones you don&#39;t want to see using the <code>X</code> button on the property. </p>
+<blockquote>
+<h4 id="note-hidden-property-editing" class="heading-with-anchor">Note <!-- anchor: note-hidden-property-editing --><a href="#note-hidden-property-editing" class="heading-with-anchor-anchor">#</a></h4><p>It is important to remember that keyframes are still <a href="/handbook/keyframes/keyframes#auto-keyframes">automatically added</a> for hidden properties as well. If you find this behavior unexpected, you can disable it in the <a href="/handbook/settings/general#auto-add-keyframes">settings</a>.</p>
+</blockquote>
+<h2 id="multidimensional" class="heading-with-anchor">Multidimensional Properties <!-- anchor: multidimensional --><a href="#multidimensional" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/keyframes/multidim_props.jpg" alt="Separates property dimensions"></p>
+<p>Some properties (such as Position and Scale) are multidimensional, which means that they are in reality made up of two properties - one for the x-axis and one for the y-axis.</p>
+<p>Such multidimensional properties can be split into their separate dimensions using the <code>Separate X and Y</code> <a href="/handbook/interface/editor#tip-actions-tap">property action</a>.</p>
+<p>They can then be collapsed again using the <code>Collapse dimensions</code> action, but this is only possible if both x and y properties have keyframes on all the same frames. When you edit a collapsed multidimensional property, your edits (e.g. regarding <a href="/handbook/keyframes/easing_curves">easing curves</a>) are automatically applied to both of the underlying x and y properties.</p>
+`;
+  </script>
+  <link rel="icon" type="image/x-icon" href="./../../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="./../../assets/images/apple_icon.png">
+  <meta property="og:image" content="./../../assets/images/apple_icon.png" />
+<link href="/main.css" rel="stylesheet"></head>
+<body id="container">
+  <script src="./../../react.production.min.js"></script>
+  <script src="./../../react-dom.production.min.js"></script>
+<script type="text/javascript" src="/main.js"></script></body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Masking</title>
+  <script>
+    document.toonsquid_i18nValues = {"home":"Home","support":"Support","download":"Download","discussions":"Discussions","handbook":"Handbook","contact":"Contact","faq":"FAQ","home.toonsquid_tagline":"The powerful animation studio for your iPad.","home.brushes":"Brushes","home.brushes_desc":"Beautiful.\nHigh performance.\nFully customizable.","home.trad_anim":"Traditional Animation","home.trad_anim_desc":"Hand-drawn.\nCharming.","home.keyframing":"Keyframing","home.keyframing_desc":"Animate layer properties.\nDefine motion paths.","home.privacy":"Privacy","home.privacy_desc":"No ads.\nNo subscriptions.\nNo tracking.","home.text_layer":"Text Layers","home.text_layer_desc":"Emojis.\nRight-to-left text.\nTrimming animation.","home.multimedia":"Multimedia","home.multimedia_desc":"Video and audio layers.","home.path_layer":"Vector Shapes","home.path_layer_desc":"Gradients.\nControl points.\nMorphing animations.","home.symbols":"Symbols","home.symbols_desc":"Animate once.\nReuse many times.","home.vector_brushes":"Vector Brushes","home.vector_brushes_desc":"Sharp strokes at all scales.","home.masking":"Layer masking","home.masking_desc":"Clip to animated layer contents.","home.easing":"Easing Curves","home.easing_desc":"Lots of customizable presets.","home.camera":"Camera","home.camera_desc":"Dynamic movement.","home.timeline":"Timeline","home.timeline_desc":"Powerful and flexible.","general.no_search_results":"No search results","footer.about":"About","footer.externalLinks":"External Links","footer.legal":"Legal","footer.privacy":"Privacy Policy","footer.terms":"Terms of Use","footer.imprint":"Imprint","search_ph":"What are you looking for?","hb.interface":"Interface","hb.editor":"Editor","hb.timeline":"Timeline","hb.library":"Library","hb.gestures":"Gestures","hb.shortcuts":"Shortcuts","hb.overview":"Overview","hb.projects":"Projects","hb.create_project":"Create a new Project","hb.manage":"Manage Projects","hb.scenes":"Scenes","hb.backup":"Backup","hb.layers":"Layers","hb.animation":"Animation Layer","hb.drawings":"Drawings","hb.layer_types":"Layer Types","hb.inspector":"Inspector","hb.pixel_layer":"Pixel Layer","hb.group":"Group Layer","hb.background":"Background Layer","hb.camera":"Camera","hb.audio":"Audio","hb.video":"Video","hb.onion_skin":"Onion Skinning","hb.masking":"Masking","hb.layer_list":"Layer List","hb.blend_modes":"Blend Modes","hb.keyframes":"Keyframes","hb.easing_curves":"Easing Curves","hb.brushes":"Brushes","hb.brush_tool":"Brush Tool","hb.vector":"Vector Brushes","hb.brush_editor":"Brush Editor","hb.brush_settings":"Brush Settings","hb.brush_textures":"Brush Textures","hb.brush_import":"Import and Export","hb.transform":"Transform","hb.transform_properties":"Transform Properties","hb.transform_tool":"Transform Tool","hb.transform_layer":"Transform Layer","hb.motion_path":"Motion Path","hb.hierarchy":"Hierarchy","hb.text":"Text","hb.text_layer":"Text Layer","hb.text_editing":"Text Editing","hb.fonts":"Fonts","hb.path":"Path","hb.path_layer":"Path Layer","hb.path_tool":"Path Tool","hb.shape_library":"Shape Library","hb.morphing":"Morphing","hb.symbols":"Symbols","hb.animation_clips":"Animation Clips","hb.symbol_layer":"Symbol Layer","hb.create_symbol":"Create Symbols","hb.selection":"Selection","hb.selection_tool":"Selection Tool","hb.colors":"Colors","hb.color_picker":"Color Picker","hb.pipette":"Pipette","hb.fill_tool":"Fill Tool","hb.color_palettes":"Color Palettes","hb.gradients":"Gradients","hb.color_spaces":"Color Spaces","hb.export":"Export","hb.gif":"GIF","hb.image":"Image","hb.image_sequence":"Image Sequence","hb.project":"Project","hb.settings":"Settings","hb.general":"General","hb.project_info":"Project Info"};
+    document.toonsquid_content = `<h4><a href="/handbook/layers/overview">Layers</a></h4><!--- tags: mask, clipping, matte, track-matte -->
+
+<h1>Masking</h1><p>Layers can be masked using the alpha channel (i.e. the opacity of each pixel) of another layer. </p>
+<p><img src="/assets/images/hb/layers/masking.jpg" alt="Layer masked by shape"></p>
+<h2 id="definitions" class="heading-with-anchor">Definitions <!-- anchor: definitions --><a href="#definitions" class="heading-with-anchor-anchor">#</a></h2><h3 id="mask-layer" class="heading-with-anchor">Mask Layer <!-- anchor: mask-layer --><a href="#mask-layer" class="heading-with-anchor-anchor">#</a></h3><p>The layer that defines the mask using its alpha channel is referred to as the &quot;mask layer&quot;.</p>
+<p>The colors in the mask layer have no impact on the mask - only the alpha channel is important.</p>
+<p>Only layers with visual content can be mask layers. The camera layer, transform layer etc. cannot be used as mask layers.</p>
+<p>Mask layers can also have animated contents. You can perform masking with both animation layers and drawing layers.</p>
+<h3 id="masked-layer" class="heading-with-anchor">Masked Layer <!-- anchor: masked-layer --><a href="#masked-layer" class="heading-with-anchor-anchor">#</a></h3><p>The layers whose contents are only visible in the areas defined by a mask layer are called &quot;masked layers&quot;.</p>
+<p>Masked layers show a small arrow next to their thumbnail pointing down towards the mask layer.</p>
+<p>Multiple masked layers in a row all refer to the same layer as their mask.</p>
+<h2 id="create-mask" class="heading-with-anchor">How to create Masks <!-- anchor: create-mask --><a href="#create-mask" class="heading-with-anchor-anchor">#</a></h2><ol>
+<li>Place the mask layer immediately below the layer to be masked in the layer list.</li>
+<li>Select the layer to be masked.</li>
+<li>Tap it again to show the layer actions.</li>
+<li>Tap <code>Toggle mask</code>.</li>
+</ol>
+<h2 id="hide-mask" class="heading-with-anchor">Hide Mask Layer <!-- anchor: hide-mask --><a href="#hide-mask" class="heading-with-anchor-anchor">#</a></h2><p>By default, the mask layer itself remains visible and continues to behave like any other layer. You can hide the mask layer using the <code>Hide mask</code> <a href="/handbook/layers/layer_list#actions">layer action</a>.</p>
+<p>The mask will continue to work as it did before, but the contents of the mask layer will not be shown as part of the animation. This is in contrast to just toggling the <a href="/handbook/layers/layer_list#visibility">visibility</a> of the mask layer, which will also make all masked layers disappear.</p>
+<h2 id="invert-mask" class="heading-with-anchor">Invert Mask <!-- anchor: invert-mask --><a href="#invert-mask" class="heading-with-anchor-anchor">#</a></h2><p>Mask layers with <a href="/handbook/layers/masking#hide-mask">hidden contents</a> can be inverted using the <code>Invert Mask</code> <a href="/handbook/layers/layer_list#actions">layer action</a>. </p>
+<p>This causes previously visible areas of the masked layers to be invisible and previously hidden areas to now be visible.</p>
+<h2 id="group" class="heading-with-anchor">Groups <!-- anchor: group --><a href="#group" class="heading-with-anchor-anchor">#</a></h2><p>Group layers can also be used as mask layers. In that case, all group contents are combined to define the mask.</p>
+`;
+  </script>
+  <link rel="icon" type="image/x-icon" href="./../../assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="./../../assets/images/apple_icon.png">
+  <meta property="og:image" content="./../../assets/images/apple_icon.png" />
+<link href="/main.css" rel="stylesheet"></head>
+<body id="container">
+  <script src="./../../react.production.min.js"></script>
+  <script src="./../../react-dom.production.min.js"></script>
+<script type="text/javascript" src="/main.js"></script></body>
+</html>
