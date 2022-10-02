@@ -68,6 +68,7 @@ https://toonsquid.com/handbook/settings/overview/
 https://toonsquid.com/handbook/settings/project_info/
 https://toonsquid.com/handbook/symbols/animation_clips/
 https://toonsquid.com/handbook/symbols/create_symbol/
+https://toonsquid.com/handbook/symbols/marker_animation/
 https://toonsquid.com/handbook/symbols/overview/
 https://toonsquid.com/handbook/symbols/symbol_layer/
 https://toonsquid.com/handbook/text/fonts/
