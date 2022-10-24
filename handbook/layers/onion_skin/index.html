@@ -19,13 +19,17 @@
 <p>This mode is most useful for traditional frame-by-frame animation where the contents of each drawing don&#39;t change over the course of the drawing.</p>
 <h4 id="mode-frames" class="heading-with-anchor">Frames <!-- anchor: mode-frames --><a href="#mode-frames" class="heading-with-anchor-anchor">#</a></h4><p>In this mode, the onion skin numbers refer to how many frames before and after the current frame should be shown as onion skins. This way you can see multiple frames within the same drawing.</p>
 <p>You probably want to choose this mode if you are animating the contents of your drawings using <a href="/handbook/keyframes/keyframes">keyframes</a>.</p>
-<!-- feature: !NEW_ONION_SKIN_OPTIONS -->
-
-<h3 id="colors" class="heading-with-anchor">Colors <!-- anchor: colors --><a href="#colors" class="heading-with-anchor-anchor">#</a></h3><p>When previous and next drawings are shown during onion skinning, they are tinted in a different color to distinguish them from each other and the current drawing.</p>
-<p>You can customize the color for the previous and next drawings.</p>
-<p>The opacity of the previous and next drawings decreases the further their distance is from the current drawing.</p>
-<!-- end-feature: !NEW_ONION_SKIN_OPTIONS -->
-
+<h3 id="order" class="heading-with-anchor">Order <!-- anchor: order --><a href="#order" class="heading-with-anchor-anchor">#</a></h3><p>Controls the order of onion skins and the current drawing.</p>
+<h4 id="order-behind" class="heading-with-anchor">Behind <!-- anchor: order-behind --><a href="#order-behind" class="heading-with-anchor-anchor">#</a></h4><p>Onion skin frames appear behind the current drawing. This is the default.</p>
+<h4 id="order-front" class="heading-with-anchor">In Front <!-- anchor: order-front --><a href="#order-front" class="heading-with-anchor-anchor">#</a></h4><p>Onion skin frames appear in front of the current drawing.</p>
+<h3 id="number-of-prev-next" class="heading-with-anchor">Previous Drawings / Next Drawings <!-- anchor: number-of-prev-next --><a href="#number-of-prev-next" class="heading-with-anchor-anchor">#</a></h3><p>You can configure how many of the drawings or frames before and after the current drawing you would like to see when onion skinning is enabled.</p>
+<h3 id="tint-mode" class="heading-with-anchor">Tint Mode <!-- anchor: tint-mode --><a href="#tint-mode" class="heading-with-anchor-anchor">#</a></h3><p>Controls how the onion skin drawings should be colored.</p>
+<h4 id="tint-mode-tinted" class="heading-with-anchor">Tinted <!-- anchor: tint-mode-tinted --><a href="#tint-mode-tinted" class="heading-with-anchor-anchor">#</a></h4><p>The colors of the onion skin drawings are replaced with a configurable tint color and a lowered opacity.</p>
+<h4 id="tint-mode-original" class="heading-with-anchor">Original Colors <!-- anchor: tint-mode-original --><a href="#tint-mode-original" class="heading-with-anchor-anchor">#</a></h4><p>The onion skins show the original colors of the drawings and only their opacity is reduced.</p>
+<h3 id="colors" class="heading-with-anchor">Colors <!-- anchor: colors --><a href="#colors" class="heading-with-anchor-anchor">#</a></h3><p>You can customize the tint color for the previous and next drawings. Make sure that the <a href="/handbook/layers/onion_skin#tint-mode">tint mode</a> of the onion skins is set to <code>Tinted</code>.</p>
+<h3 id="opacity" class="heading-with-anchor">Opacity <!-- anchor: opacity --><a href="#opacity" class="heading-with-anchor-anchor">#</a></h3><p>By default, the opacity of the previous and next onion skin drawings decreases the further their distance is from the current drawing. You can use the opacity sliders in order to adjust the individual opacity of each onion skin frame.</p>
+<h4 id="opacity-link" class="heading-with-anchor">Linked Opacity <!-- anchor: opacity-link --><a href="#opacity-link" class="heading-with-anchor-anchor">#</a></h4><p><img src="/assets/images/hb/layers/onion_skin_opacity_link.jpg" alt="Opacity link button"></p>
+<p>Initially, the opacity sliders are linked together for easier adjustment. You can unlink them with this button if you want to change only one slider value at a time.</p>
 <h2 id="layer-settings" class="heading-with-anchor">Layer Settings <!-- anchor: layer-settings --><a href="#layer-settings" class="heading-with-anchor-anchor">#</a></h2><p>By default, onion skinning is enabled for all animation layers, however, it is also possible to disable it on individual animation layers if necessary.</p>
 <p>Either use the <a href="/handbook/layers/layer_list#disable-onion-skin">layer actions</a> or the <a href="/handbook/layers/animation#onion-skin">inspector</a> to disable onion-skins on a particular layer.</p>
 <p>Such layers will show a greyed-out onion skin icon next to the layer name to indicate that they do not render onion skins.</p>

@@ -53,6 +53,9 @@
 <h3 id="disable-onion-skin" class="heading-with-anchor">Disable onion skin <!-- anchor: disable-onion-skin --><a href="#disable-onion-skin" class="heading-with-anchor-anchor">#</a></h3><p>Whether <a href="/handbook/layers/onion_skin">onion skinning</a> should be enabled for this layer or not. Layers for which onion skinning is disabled show a small greyed-out onion skin icon next to their name.</p>
 <h3 id="focus" class="heading-with-anchor">Focus <!-- anchor: focus --><a href="#focus" class="heading-with-anchor-anchor">#</a></h3><p>Brings the layer contents on the current frame into view on the canvas.</p>
 <h3 id="create-symbol" class="heading-with-anchor">Create Symbol <!-- anchor: create-symbol --><a href="#create-symbol" class="heading-with-anchor-anchor">#</a></h3><p><a href="/handbook/symbols/create_symbol">Creates a symbol</a> from the selected layers.</p>
+<h3 id="rasterize-animation-layer" class="heading-with-anchor">Rasterize <!-- anchor: rasterize-animation-layer --><a href="#rasterize-animation-layer" class="heading-with-anchor-anchor">#</a></h3><p>You can rasterize the entire contents of one or multiple selected animation layers into a frame by frame animation.</p>
+<p>This will create a new animation layer with separate drawings on each frame. Each drawing will contain a single pixel layer with the combined rasterized contents of the selected animation layers at that frame. Note that only the region of your canvas defined by the project resolution will contain any visible content after rasterization. Any animation outside of this region will not appear in the new pixel layers.</p>
+<p>The original layers remain in the timeline and are automatically set to be hidden.</p>
 `;
   </script>
   <link rel="icon" type="image/x-icon" href="./../../../assets/images/favicon.png">
