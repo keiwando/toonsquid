@@ -17,9 +17,14 @@
 <h2 id="lock-alpha" class="heading-with-anchor">Lock Transparency <!-- anchor: lock-alpha --><a href="#lock-alpha" class="heading-with-anchor-anchor">#</a></h2><p>You can lock and unlock the transparency of the pixels via the <a href="/handbook/layers/layer_list#lock-alpha">layer actions</a>. Drawing on a pixel layer with locked transparency will only modify the colors of the pixels but not their opacity. </p>
 <p>This means that fully transparent areas of the layer will remain transparent when you move a brush over them. You can use this feature to easily shade the contents of your layers without having to worry about going over your carefully drawn edges. </p>
 <p>The brush, smudge and fill tools all respect the &quot;Lock Transparency&quot; option. You can still edit the pixels without any limitations using the transform tool, even with this option enabled. You can also still use the eraser on such a layer. If you want to prevent both of these types of edits, you can use the <a href="/handbook/layers/layer_list#lock">lock</a> option instead.</p>
-<h2 id="images" class="heading-with-anchor">Images <!-- anchor: images --><a href="#images" class="heading-with-anchor-anchor">#</a></h2><p>When you import images via the <a href="/handbook/interface/editor#library">library</a>, they are rasterized into pixel layers in a separate, automatically created <a href="/handbook/symbols/animation_clips">animation clip</a>.</p>
-<h3 id="add-images" class="heading-with-anchor">Adding Images <!-- anchor: add-images --><a href="#add-images" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/interface/library_add_content.jpg" alt="Adding images via the library"></p>
-<p>To import images into your project so that you can insert them into the timeline, follow these steps:</p>
+<blockquote>
+<h4 id="tip-animation-layer-alpha-lock" class="heading-with-anchor">Tip <!-- anchor: tip-animation-layer-alpha-lock --><a href="#tip-animation-layer-alpha-lock" class="heading-with-anchor-anchor">#</a></h4><p>You can also set the transparency lock on an animation layer, which then automatically applies to all pixel layers in all drawings of that animation layer.</p>
+</blockquote>
+<h2 id="images" class="heading-with-anchor">Images <!-- anchor: images --><a href="#images" class="heading-with-anchor-anchor">#</a></h2><p>When you import images, they are rasterized into pixel layers in a separate, automatically created <a href="/handbook/symbols/animation_clips">animation clip</a>.</p>
+<h3 id="add-images" class="heading-with-anchor">Adding Images <!-- anchor: add-images --><a href="#add-images" class="heading-with-anchor-anchor">#</a></h3><p>You can import an image into the timeline by tapping the <code>+</code> button in the timeline and selecting <code>Image</code>.</p>
+<p><img src="/assets/images/hb/layers/import_via_timeline.jpg" alt="Image import via timeline"></p>
+<p>Alternatively, you can also import images into your project via the library with these steps:</p>
+<p><img src="/assets/images/hb/interface/library_add_content.jpg" alt="Adding images via the library"></p>
 <ol>
 <li>Open the <a href="/handbook/interface/editor#library">library</a>.</li>
 <li>Tap the <code>+</code> button in the top right corner.</li>
@@ -41,6 +46,16 @@
 <li>HEIF</li>
 <li>GIF</li>
 </ul>
+<h2 id="import-image-sequence" class="heading-with-anchor">Image Sequence Import <!-- anchor: import-image-sequence --><a href="#import-image-sequence" class="heading-with-anchor-anchor">#</a></h2><p>To import a sequence of images directly into multiple drawings of a new animation layer, you can</p>
+<ol>
+<li>Tap the <code>+</code> button in the timeline.</li>
+</ol>
+<p><img src="/assets/images/hb/layers/import_via_timeline.jpg" alt="Audio import via timeline"></p>
+<ol start="2">
+<li>Select <code>Image Sequence</code>.</li>
+<li>Choose the images that should be imported in the file dialog.</li>
+</ol>
+<p>All selected images will be imported in alphanumeric order of their filenames into pixel layers in consecutive drawings. Each drawing is set to last one frame and the images are scaled to fit into the current project&#39;s resolution.</p>
 `;
   </script>
   <link rel="icon" type="image/x-icon" href="./../../../assets/images/favicon.png">

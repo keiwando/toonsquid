@@ -73,6 +73,7 @@
 <p>The playback toolbar sits at the top of the timeline and always stays visible, even when the timeline is collapsed.</p>
 <h3 id="interface_timeline_next-previous-frame" class="heading-with-anchor">Next / Previous Frame <!-- anchor: next-previous-frame --><a href="#next-previous-frame" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/interface/prev_next_frame.jpg" alt="Previous and next frame buttons"></p>
 <p>Use the two buttons on the far left of the playback toolbar to move to the next or previous frame in the timeline.</p>
+<p>In the <a href="#settings_general_forward-backward-button-behaviour">settings</a> you can also change this behaviour to instead move to the next or previous drawings in the selected layer.</p>
 <h3 id="interface_timeline_onion-skin" class="heading-with-anchor">Onion Skin <!-- anchor: onion-skin --><a href="#onion-skin" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/interface/onion_skin_button.jpg" alt="Onion skin button"></p>
 <p>Toggles onion skinning on and off, allowing you to see the contents of the previous and next drawings. Hold the button for more options. The Onion Skinning feature and the available options are covered in detail <a href="#layers_onion_skin">on this page</a>.</p>
 <h3 id="interface_timeline_loop" class="heading-with-anchor">Loop <!-- anchor: loop --><a href="#loop" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/interface/loop_button.jpg" alt="Loop button"></p>
@@ -396,7 +397,9 @@
 <h3 id="layers_layer_list_merge-down" class="heading-with-anchor">Merge down <!-- anchor: merge-down --><a href="#merge-down" class="heading-with-anchor-anchor">#</a></h3><p>Rasterizes the selected layer and the layer below and merges them into a single layer, replacing the original two layers.</p>
 <h3 id="layers_layer_list_merge-all-visible" class="heading-with-anchor">Merge all visible <!-- anchor: merge-all-visible --><a href="#merge-all-visible" class="heading-with-anchor-anchor">#</a></h3><p>Rasterizes all visible layers and combines them into a new Pixel layer. The original layers remain unmodified.</p>
 <h3 id="layers_layer_list_edit-clip" class="heading-with-anchor">Edit Clip <!-- anchor: edit-clip --><a href="#edit-clip" class="heading-with-anchor-anchor">#</a></h3><p>This option only exists for <a href="#symbols_symbol_layer">symbol layers</a>. Opens the clip referenced by the symbol layer in the editor</p>
-<h3 id="layers_layer_list_lock-alpha" class="heading-with-anchor">Lock / Unlock Transparency <!-- anchor: lock-alpha --><a href="#lock-alpha" class="heading-with-anchor-anchor">#</a></h3><p>This option only exists for <a href="#layers_pixel_layer_lock-alpha">pixel layers</a>. Locks the transparency of all pixels in the layer to not be modifiable by the brush or fill tool.</p>
+<h3 id="layers_layer_list_lock-alpha" class="heading-with-anchor">Lock / Unlock Transparency <!-- anchor: lock-alpha --><a href="#lock-alpha" class="heading-with-anchor-anchor">#</a></h3><p>This option only exists for <a href="#layers_pixel_layer_lock-alpha">pixel layers</a> and <a href="#layers_animation">animation layers</a>. Locks the transparency of all pixels in the layer to not be modifiable by the brush or fill tool.</p>
+<p>When set on an animation layer, the setting applies to all pixel layers in all drawings of the animation layer.</p>
+<h3 id="layers_layer_list_fill-reference" class="heading-with-anchor">Set as Fill Reference <!-- anchor: fill-reference --><a href="#fill-reference" class="heading-with-anchor-anchor">#</a></h3><p>Defines this layer as the <a href="#colors_fill_tool_reference-layer">reference layer</a> for the fill tool. This allows you to use the fill tool on a separate layer while limiting the fill regions based on the contents of this layer.</p>
 <h2 id="layers_layer_list_timeline" class="heading-with-anchor">Timeline Layer Actions <!-- anchor: timeline --><a href="#timeline" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/layers/anim_layer_actions.jpg" alt="Animation layer actions"></p>
 <p>Only layers in the timeline have the following actions:</p>
 <h3 id="layers_layer_list_disable-onion-skin" class="heading-with-anchor">Disable onion skin <!-- anchor: disable-onion-skin --><a href="#disable-onion-skin" class="heading-with-anchor-anchor">#</a></h3><p>Whether <a href="#layers_onion_skin">onion skinning</a> should be enabled for this layer or not. Layers for which onion skinning is disabled show a small greyed-out onion skin icon next to their name.</p>
@@ -430,9 +433,14 @@
 <h2 id="layers_pixel_layer_lock-alpha" class="heading-with-anchor">Lock Transparency <!-- anchor: lock-alpha --><a href="#lock-alpha" class="heading-with-anchor-anchor">#</a></h2><p>You can lock and unlock the transparency of the pixels via the <a href="#layers_layer_list_lock-alpha">layer actions</a>. Drawing on a pixel layer with locked transparency will only modify the colors of the pixels but not their opacity. </p>
 <p>This means that fully transparent areas of the layer will remain transparent when you move a brush over them. You can use this feature to easily shade the contents of your layers without having to worry about going over your carefully drawn edges. </p>
 <p>The brush, smudge and fill tools all respect the &quot;Lock Transparency&quot; option. You can still edit the pixels without any limitations using the transform tool, even with this option enabled. You can also still use the eraser on such a layer. If you want to prevent both of these types of edits, you can use the <a href="#layers_layer_list_lock">lock</a> option instead.</p>
-<h2 id="layers_pixel_layer_images" class="heading-with-anchor">Images <!-- anchor: images --><a href="#images" class="heading-with-anchor-anchor">#</a></h2><p>When you import images via the <a href="#interface_editor_library">library</a>, they are rasterized into pixel layers in a separate, automatically created <a href="#symbols_animation_clips">animation clip</a>.</p>
-<h3 id="layers_pixel_layer_add-images" class="heading-with-anchor">Adding Images <!-- anchor: add-images --><a href="#add-images" class="heading-with-anchor-anchor">#</a></h3><p><img src="/assets/images/hb/interface/library_add_content.jpg" alt="Adding images via the library"></p>
-<p>To import images into your project so that you can insert them into the timeline, follow these steps:</p>
+<blockquote>
+<h4 id="layers_pixel_layer_tip-animation-layer-alpha-lock" class="heading-with-anchor">Tip <!-- anchor: tip-animation-layer-alpha-lock --><a href="#tip-animation-layer-alpha-lock" class="heading-with-anchor-anchor">#</a></h4><p>You can also set the transparency lock on an animation layer, which then automatically applies to all pixel layers in all drawings of that animation layer.</p>
+</blockquote>
+<h2 id="layers_pixel_layer_images" class="heading-with-anchor">Images <!-- anchor: images --><a href="#images" class="heading-with-anchor-anchor">#</a></h2><p>When you import images, they are rasterized into pixel layers in a separate, automatically created <a href="#symbols_animation_clips">animation clip</a>.</p>
+<h3 id="layers_pixel_layer_add-images" class="heading-with-anchor">Adding Images <!-- anchor: add-images --><a href="#add-images" class="heading-with-anchor-anchor">#</a></h3><p>You can import an image into the timeline by tapping the <code>+</code> button in the timeline and selecting <code>Image</code>.</p>
+<p><img src="/assets/images/hb/layers/import_via_timeline.jpg" alt="Image import via timeline"></p>
+<p>Alternatively, you can also import images into your project via the library with these steps:</p>
+<p><img src="/assets/images/hb/interface/library_add_content.jpg" alt="Adding images via the library"></p>
 <ol>
 <li>Open the <a href="#interface_editor_library">library</a>.</li>
 <li>Tap the <code>+</code> button in the top right corner.</li>
@@ -454,6 +462,16 @@
 <li>HEIF</li>
 <li>GIF</li>
 </ul>
+<h2 id="layers_pixel_layer_import-image-sequence" class="heading-with-anchor">Image Sequence Import <!-- anchor: import-image-sequence --><a href="#import-image-sequence" class="heading-with-anchor-anchor">#</a></h2><p>To import a sequence of images directly into multiple drawings of a new animation layer, you can</p>
+<ol>
+<li>Tap the <code>+</code> button in the timeline.</li>
+</ol>
+<p><img src="/assets/images/hb/layers/import_via_timeline.jpg" alt="Audio import via timeline"></p>
+<ol start="2">
+<li>Select <code>Image Sequence</code>.</li>
+<li>Choose the images that should be imported in the file dialog.</li>
+</ol>
+<p>All selected images will be imported in alphanumeric order of their filenames into pixel layers in consecutive drawings. Each drawing is set to last one frame and the images are scaled to fit into the current project&#39;s resolution.</p>
 <h4 id="layers_group" class="heading-with-anchor pdf-page-separator"><!-- anchor: _pdf_chapter_dummy_anchor_ --><a href="#_pdf_chapter_dummy_anchor_" class="heading-with-anchor-anchor">#</a></h4><h4><a href="#layers_overview">Layers</a></h4><!--- tags: group, organization, folding, hiding, expanding, pre-comp, composite group -->
 
 <h1>Group Layer</h1><p>Groups can be used to group layers in the timeline and within drawing layers for organizational purposes.</p>
@@ -502,7 +520,9 @@
 <h1>Audio</h1><p>Use audio layers in order to add audio clips to the timeline to be played back together with the animation.</p>
 <p><img src="/assets/images/hb/layers/audio.jpg" alt="Audio layer"></p>
 <p>Audio clips behave similarly to drawings in the timeline. You can use the <a href="#interface_timeline_retiming">retiming handles</a> to trim and shift them.</p>
-<h2 id="layers_audio_import" class="heading-with-anchor">Importing Audio <!-- anchor: import --><a href="#import" class="heading-with-anchor-anchor">#</a></h2><p>To import audio clips into your project so that you can insert them into the timeline, follow these steps:</p>
+<h2 id="layers_audio_import" class="heading-with-anchor">Importing Audio <!-- anchor: import --><a href="#import" class="heading-with-anchor-anchor">#</a></h2><p>You can import audio files into the timeline by tapping the <code>+</code> button in the timeline and selecting <code>Audio</code>.</p>
+<p><img src="/assets/images/hb/layers/import_via_timeline.jpg" alt="Audio import via timeline"></p>
+<p>Alternatively, you can import audio files via the library with the following steps:</p>
 <ol>
 <li>Open the <a href="#interface_editor_library">library</a>.</li>
 <li>Tap the <code>+</code> button in the top right corner.</li>
@@ -518,7 +538,7 @@
 <li>.m4a</li>
 <li>.flac</li>
 </ul>
-<p>All audio files are converted to 44.1kHz .wav files during the import for more efficient playback. The converted audio file is saved as part of the project.</p>
+<p>All audio files are converted to 44.1 kHz .wav files during the import for more efficient playback. The converted audio file is saved as part of the project.</p>
 <h2 id="layers_audio_properties" class="heading-with-anchor">Properties <!-- anchor: properties --><a href="#properties" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/layers/audio_properties.jpg" alt="Audio layer"></p>
 <h3 id="layers_audio_mute" class="heading-with-anchor">Mute <!-- anchor: mute --><a href="#mute" class="heading-with-anchor-anchor">#</a></h3><p>Audio layers can be muted entirely using the mute button (which is shown instead of the visibility button).</p>
 <h3 id="layers_audio_volume" class="heading-with-anchor">Volume <!-- anchor: volume --><a href="#volume" class="heading-with-anchor-anchor">#</a></h3><p>Specifies by how many decibels the volume of the audio clip should be changed. Can be animated using <a href="#keyframes_keyframes">keyframes</a>.</p>
@@ -531,7 +551,9 @@
 <h4 id="layers_video" class="heading-with-anchor pdf-page-separator"><!-- anchor: _pdf_chapter_dummy_anchor_ --><a href="#_pdf_chapter_dummy_anchor_" class="heading-with-anchor-anchor">#</a></h4><h4><a href="#layers_overview">Layers</a></h4><!--- tags: video, movies, audio -->
 
 <h1>Video</h1><p>Video layers allow videos to be added to an animation. You typically don&#39;t interact with the video layer directly but via an automatically generated <a href="#symbols_symbol_layer">symbol</a>, which references a clip with the video layer.</p>
-<h2 id="layers_video_import" class="heading-with-anchor">Importing Videos <!-- anchor: import --><a href="#import" class="heading-with-anchor-anchor">#</a></h2><p>To import videos into your project so that you can insert them into the timeline, follow these steps:</p>
+<h2 id="layers_video_import" class="heading-with-anchor">Importing Videos <!-- anchor: import --><a href="#import" class="heading-with-anchor-anchor">#</a></h2><p>You can import a video into the timeline by tapping the <code>+</code> button in the timeline and selecting <code>Video</code>.</p>
+<p><img src="/assets/images/hb/layers/import_via_timeline.jpg" alt="Image import via timeline"></p>
+<p>Alternatively, you can also import videos into your project via the library with these steps:</p>
 <ol>
 <li>Open the <a href="#interface_editor_library">library</a>.</li>
 <li>Tap the <code>+</code> button in the top right corner.</li>
@@ -974,6 +996,12 @@
 <h3 id="transform_transform_tool_scaling-mode" class="heading-with-anchor">Scaling Mode <!-- anchor: scaling-mode --><a href="#scaling-mode" class="heading-with-anchor-anchor">#</a></h3><p>How the layer should be scaled when one of the <a href="#transform_transform_tool_scale">scale handles</a> is dragged. </p>
 <h4 id="transform_transform_tool_uniform-scaling" class="heading-with-anchor">Uniform <!-- anchor: uniform-scaling --><a href="#uniform-scaling" class="heading-with-anchor-anchor">#</a></h4><p>The layer will be scaled evenly in the horizontal and vertical directions and therefore keep its current aspect ratio.</p>
 <h4 id="transform_transform_tool_freeform-scaling" class="heading-with-anchor">Freeform <!-- anchor: freeform-scaling --><a href="#freeform-scaling" class="heading-with-anchor-anchor">#</a></h4><p>The horizontal and vertical scale of the layer can be edited separately.</p>
+<h4 id="transform_transform_tool_perspective-scaling" class="heading-with-anchor">Perspective (Pixel Layer) <!-- anchor: perspective-scaling --><a href="#perspective-scaling" class="heading-with-anchor-anchor">#</a></h4><p>Drag the four corner points or edges in order to apply a perspective distortion to the layer.</p>
+<p><img src="/assets/images/hb/transform/perspective.jpg" alt="Perspective transform"></p>
+<h4 id="transform_transform_tool_warp-scaling" class="heading-with-anchor">Warp (Pixel Layer) <!-- anchor: warp-scaling --><a href="#warp-scaling" class="heading-with-anchor-anchor">#</a></h4><p>Drag the control points or anywhere within the layer in order to warp and reshape the layer&#39;s surface. This even allows you to fold parts of the layer over itself. </p>
+<p><img src="/assets/images/hb/transform/warp.jpg" alt="Warp transform"></p>
+<p>In order to define the overlap order, you can tap each control point and move it to the front, the middle or the back.</p>
+<p><img src="/assets/images/hb/transform/warp_order.jpg" alt="Warp control points order"><br/><img src="/assets/images/hb/transform/warp_moved_to_back.jpg" alt="Warp control points moved to back"></p>
 <h3 id="transform_transform_tool_flip" class="heading-with-anchor">Flip <!-- anchor: flip --><a href="#flip" class="heading-with-anchor-anchor">#</a></h3><p>Use the flip horizontally button (on the left) and the flip vertically button (on the right) to flip the layer around its pivot.</p>
 <h3 id="transform_transform_tool_edit-pixels" class="heading-with-anchor">Edit pixels (Pixel Layer) <!-- anchor: edit-pixels --><a href="#edit-pixels" class="heading-with-anchor-anchor">#</a></h3><p>If enabled, the transform tool will move, rotate and scale the pixel layer contents (the pixels) instead of the layer&#39;s transform property. Moving the layer contents outside the limits of the <a href="#layers_pixel_layer">layer region</a> (as defined by resolution) will cause them to be clipped when the tool is exited.</p>
 <p>This option is disabled by default.</p>
@@ -1297,6 +1325,11 @@
 <h4 id="selection_selection_tool_path-mode-rectangle" class="heading-with-anchor">Rectangle <!-- anchor: path-mode-rectangle --><a href="#path-mode-rectangle" class="heading-with-anchor-anchor">#</a></h4><p>New rectangular selection regions can be created by touching and dragging. The rectangles are added between the first and last touch positions.</p>
 <h4 id="selection_selection_tool_path-mode-ellipse" class="heading-with-anchor">Ellipse <!-- anchor: path-mode-ellipse --><a href="#path-mode-ellipse" class="heading-with-anchor-anchor">#</a></h4><p>Similar to the <code>Rectangle</code> mode but this mode adds an ellipse shape instead of a rectangle.</p>
 <h3 id="selection_selection_tool_deselect" class="heading-with-anchor">Deselect <!-- anchor: deselect --><a href="#deselect" class="heading-with-anchor-anchor">#</a></h3><p>Removes the current selection.</p>
+<h3 id="selection_selection_tool_copy-paste" class="heading-with-anchor">Copy &amp; Paste <!-- anchor: copy-paste --><a href="#copy-paste" class="heading-with-anchor-anchor">#</a></h3><p>Copies the selected region of the selected layer and pastes it into a new <a href="#layers_pixel_layer">pixel layer</a>. The selection is cleared and the editor switches to the <a href="#transform_transform_tool">transform tool</a> so that you can immediately move or otherwise transform the pasted region.</p>
+<blockquote>
+<h4 id="selection_selection_tool_tip-merge-down" class="heading-with-anchor">Tip: <!-- anchor: tip-merge-down --><a href="#tip-merge-down" class="heading-with-anchor-anchor">#</a></h4><p>If you want to quickly merge the new pasted layer with the one below it, you can simply tap it once on the canvas in the transform tool and select &quot;Merge down&quot; from the list of options.</p>
+</blockquote>
+<h3 id="selection_selection_tool_cut-paste" class="heading-with-anchor">Cut &amp; Paste <!-- anchor: cut-paste --><a href="#cut-paste" class="heading-with-anchor-anchor">#</a></h3><p>This option is only available if the selected layer is a <a href="#layers_pixel_layer">pixel layer</a>. It behaves the same as the <a href="#selection_selection_tool_copy-paste">Copy &amp; Paste</a> option but also cuts out the selected region from its original layer. </p>
 <h3 id="selection_selection_tool_invert" class="heading-with-anchor">Invert <!-- anchor: invert --><a href="#invert" class="heading-with-anchor-anchor">#</a></h3><p>Inverts the selection areas. Areas that were previously selected become deselected and ones that were not selected become selected.</p>
 <h3 id="selection_selection_tool_soft-edge" class="heading-with-anchor">Soft edge <!-- anchor: soft-edge --><a href="#soft-edge" class="heading-with-anchor-anchor">#</a></h3><p>Presents a slider that can be used to blur the edge of the current selection. The slider controls the blur radius in pixels.</p>
 <h3 id="selection_selection_tool_create-mask" class="heading-with-anchor">Create mask <!-- anchor: create-mask --><a href="#create-mask" class="heading-with-anchor-anchor">#</a></h3><p>Tap this button to use the current selection area as a <a href="#layers_masking">mask</a> for the selected <a href="#layers_layer_types_drawing-layers">drawing layer</a>. The selection is rasterized into a new pixel layer which then acts as the <a href="#layers_masking_mask-layer">mask layer</a> of the selected layer.</p>
@@ -1355,6 +1388,10 @@
 <p>The fill tool is used to fill a closed region in a <a href="#layers_pixel_layer">pixel layer</a> or <a href="#brushes_vector">vector layer</a> with the selected solid color.</p>
 <p>If the fill tool is used on an empty layer, it creates a completely filled pixel layer.</p>
 <p>If a <a href="#selection_selection">selection</a> exists, only the regions within the selection area are filled.</p>
+<h2 id="colors_fill_tool_reference-layer" class="heading-with-anchor">Fill Reference Layers <!-- anchor: reference-layer --><a href="#reference-layer" class="heading-with-anchor-anchor">#</a></h2><p>It is common to keep linework separate from coloring layers. In order to use the fill tool on one layer based on the contents of another, you can mark the layer containing your linework as the fill reference using the <code>Set as Fill Reference</code> <a href="#layers_layer_list_actions">layer action</a>.</p>
+<p><img src="/assets/images/hb/layers/fill_reference_action.jpg" alt="Fill reference layer action"></p>
+<p>You can set this for both <a href="#layers_animation">animation layers</a> and <a href="#layers_layer_types_drawing-layers">drawing layers</a>. There can at most be one reference layer in each drawing and at most one reference animation layer.</p>
+<p>When an animation layer is defined to be a fill reference layer, the combined contents of all of its drawing layers on the current frame form the limits of the fill region.</p>
 <h2 id="colors_fill_tool_tool-options" class="heading-with-anchor">Tool Options <!-- anchor: tool-options --><a href="#tool-options" class="heading-with-anchor-anchor">#</a></h2><p><img src="/assets/images/hb/colors/fill_tool_options.jpg" alt="Fill tool options"></p>
 <h3 id="colors_fill_tool_threshold" class="heading-with-anchor">Threshold <!-- anchor: threshold --><a href="#threshold" class="heading-with-anchor-anchor">#</a></h3><p>The fill tool re-paints all neighboring pixels that have the same or a similar color to the pixel that was tapped. The threshold slider limits how similar the pixels have to be to still be filled with the new color. The lower the threshold value, the fewer differing pixels get filled.</p>
 <h3 id="colors_fill_tool_smooth" class="heading-with-anchor">Smooth <!-- anchor: smooth --><a href="#smooth" class="heading-with-anchor-anchor">#</a></h3><p>This option controls whether the filled region should smoothly transition into the boundary color or not. If it is disabled, the pixels are only filled with exactly the selected color and no transition is created at the boundary. This can result in a hard, jagged edge of the filled region.</p>
@@ -1529,6 +1566,9 @@
 <h3 id="settings_general_follow-camera" class="heading-with-anchor">Follow the camera layer during playback <!-- anchor: follow-camera --><a href="#follow-camera" class="heading-with-anchor-anchor">#</a></h3><p>If this option is enabled and a camera layer exists, the camera will stay focused on the canvas during playback of the animation. This makes it easier to visualize the final output when there is an animated camera.</p>
 <p>Once the playback stops, the canvas is automatically reset to its state before the playback.</p>
 <h3 id="settings_general_reset-frame-on-pause" class="heading-with-anchor">Reset the frame after pausing playback <!-- anchor: reset-frame-on-pause --><a href="#reset-frame-on-pause" class="heading-with-anchor-anchor">#</a></h3><p>If this option is enabled and you pause the playback, the selected frame of the editor will automatically reset to its value before you hit play.</p>
+<h3 id="settings_general_forward-backward-button-behaviour" class="heading-with-anchor">Forward / Backward buttons should move between <!-- anchor: forward-backward-button-behaviour --><a href="#forward-backward-button-behaviour" class="heading-with-anchor-anchor">#</a></h3><p>This setting defines how the selected frame should change when you tap the <a href="#interface_timeline_next-previous-frame">forward and backward</a> buttons on the left edge of the timeline.</p>
+<h4 id="settings_general_forward-backward-to-frame" class="heading-with-anchor">Frames <!-- anchor: forward-backward-to-frame --><a href="#forward-backward-to-frame" class="heading-with-anchor-anchor">#</a></h4><p>The play cursor should move to the next or previous frame in the timeline.</p>
+<h4 id="settings_general_forward-backward-to-drawing" class="heading-with-anchor">Drawings <!-- anchor: forward-backward-to-drawing --><a href="#forward-backward-to-drawing" class="heading-with-anchor-anchor">#</a></h4><p>The play cursor should move to the beginning of the next or previous drawing in the selected layer.</p>
 <h2 id="settings_general_drawings" class="heading-with-anchor">Drawings <!-- anchor: drawings --><a href="#drawings" class="heading-with-anchor-anchor">#</a></h2><p>The drawing settings belong to the scene or clip that is currently open in the editor. You can define a different value for this in each <a href="#projects_scenes">scene</a> and <a href="#symbols_animation_clips">animation clip</a> of the project.</p>
 <h3 id="settings_general_default-drawing-length" class="heading-with-anchor">Default drawing length (in frames) <!-- anchor: default-drawing-length --><a href="#default-drawing-length" class="heading-with-anchor-anchor">#</a></h3><p>The default duration of new drawings that you add to the timeline, specified as a number of frames. This value is initially selected based on your <a href="#projects_create_project_workflow">default workflow</a> choice when configuring the project or animation clip.</p>
 <h3 id="settings_general_new-drawings-start" class="heading-with-anchor">Start frame of new drawings <!-- anchor: new-drawings-start --><a href="#new-drawings-start" class="heading-with-anchor-anchor">#</a></h3><p>This setting defines whether new drawings in empty layers should begin on the first frame of the timeline or on the currently selected frame.</p>
