@@ -81,5 +81,6 @@ https://toonsquid.com/handbook/settings/overview/
 https://toonsquid.com/handbook/settings/general/
 https://toonsquid.com/handbook/settings/appearance/
 https://toonsquid.com/handbook/settings/gestures/
+https://toonsquid.com/handbook/settings/backup/
 https://toonsquid.com/handbook/settings/project_info/
 https://toonsquid.com/handbook/
